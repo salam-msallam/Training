@@ -12,13 +12,9 @@
 <table class="table">
     <thead>
       <tr>
-       
         <th scope="col">id</th>
         <th scope="col">name</th>
         <th scope="col">phone</th>
-        <th scope="col">role</th>
-        <th scope="col">createdAt</th>
-       
       </tr>
     </thead>
     <tbody>
@@ -27,8 +23,9 @@
         <td>{{$user->id}}</td>
         <td>{{$user->name}}</td>
         <td>{{$user->phone}}</td>
-        <td>{{$user->role}}</td>
-        <td>{{$user->created_at}}</td>
+          @csrf
+</form>
+       
       </tr>
       @endforeach
       
@@ -36,4 +33,10 @@
     </tbody>
   </table>
   <a href={{ route('user.create') }}>create</a>
+  <x-card type="card">
+    {{-- <x-slot name=view>
+      salam
+    </x-slot>
+    hello --}}
+  </x-card>
 </body>
